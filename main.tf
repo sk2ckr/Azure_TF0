@@ -7,7 +7,7 @@ provider "azurerm" {
 }
 
 locals {
-  port_count = length(var.APP_SERVICE_NUMBER)
+  app_service_count = length(var.APP_SERVICE_NUMBER)
 }
 
 /*
@@ -47,7 +47,7 @@ resource "azurerm_app_service_plan" "AppServicePlan" {
 }
 
 resource "azurerm_app_service" "appservices" {
-    count               = local.port_count
+    count               = local.app_service_count
     name                = "07531-AppService-${var.APP_SERVICE_NUMBER[count.index]}"
     location            = var.LOCATION
     resource_group_name = var.RESOURCE_GROUP_NAME
@@ -55,7 +55,7 @@ resource "azurerm_app_service" "appservices" {
 }
 
 resource "azurerm_app_service_slot" "appservicesSlot" {
-    count               = local.port_count
+    count               = local.app_service_count
     name                = "07531-AppServiceSlot-${var.APP_SERVICE_NUMBER[count.index]}"
     location            = var.LOCATION
     resource_group_name = var.RESOURCE_GROUP_NAME
