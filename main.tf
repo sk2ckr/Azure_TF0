@@ -19,7 +19,7 @@ resource "azurerm_resource_group" "resource_group" {
 */
 
 module "vnet" {
-    
+
     source                      = "./modules/vnet" 
     
     TAGS_ENV                    = var.TAGS_ENV
