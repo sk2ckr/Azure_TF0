@@ -6,7 +6,7 @@ resource "azurerm_virtual_network" "tsop_vnet" {
     resource_group_name = var.RESOURCE_GROUP_NAME
 
     tags = {
-        environment = var.TAGS_ENV
+        environment     = var.TAGS_ENV
     }
 }
 
@@ -17,7 +17,7 @@ resource "azurerm_virtual_network" "onm_vnet" {
     resource_group_name = var.RESOURCE_GROUP_NAME
 
     tags = {
-        environment = var.TAGS_ENV
+        environment     = var.TAGS_ENV
     }
 }
 
