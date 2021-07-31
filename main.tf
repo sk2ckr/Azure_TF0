@@ -19,11 +19,23 @@ resource "azurerm_resource_group" "resource_group" {
 */
 
 module "vnet" {
+    
     source                      = "./modules/vnet" 
     
     TAGS_ENV                    = var.TAGS_ENV
     NAME_PREFIX                 = var.NAME_PREFIX
-    CLIENT_VNET                 = var.CLIENT_VNET
+    TSOP_VNET                   = var.TSOP_VNET
+    ONM_VNET                    = var.ONM_VNET
+    LOCATION                    = var.LOCATION
+    RESOURCE_GROUP_NAME         = var.RESOURCE_GROUP_NAME
+}
+
+module "appservice" {
+
+    source                      = "./modules/appservice"
+
+    TAGS_ENV                    = var.TAGS_ENV
+    NAME_PREFIX                 = var.NAME_PREFIX
     LOCATION                    = var.LOCATION
     RESOURCE_GROUP_NAME         = var.RESOURCE_GROUP_NAME
 }

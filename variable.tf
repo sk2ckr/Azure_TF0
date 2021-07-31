@@ -74,11 +74,12 @@ variable "PLANINFO_CAPACITY" {
     default = 1
 }
 
-variable "APPINFO" {
-    default = ["fm", "ev", "cctv", "acaas", "parking",
-                "robot", "vps", "chatbot", "public", "analytics",
-                "normal", "fast", "backend", "portal", "dashboard",
-                "push", "batch", "downlink"]
+variable "TSOP_APPSERVICE" {
+#    default = ["fm", "ev", "cctv", "acaas", "parking",
+#                "robot", "vps", "chatbot", "public", "analytics",
+#                "normal", "fast", "backend", "portal", "dashboard",
+#                "push", "batch", "downlink"]
+    default = ["fm", "ev", "cctv"]
 }
 
 /*
