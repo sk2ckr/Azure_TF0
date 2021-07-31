@@ -7,7 +7,10 @@ variable "RESOURCE_GROUP_NAME" {
 variable "NAME_PREFIX" {
 }
 
-variable "CLIENT_VNET" {
+variable "ONM_VNET" {
+}
+
+variable "TSOP_VNET" {
 }
 
 variable "LOCATION" {

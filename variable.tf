@@ -14,12 +14,11 @@ variable "NAME_PREFIX" {
     default = "07531"
 }
 
-# 사용 안하면 제거 예정
-variable "CLIENT_NAME" {
-    default = "adt"
+variable "ONM_VNET" {
+    default = "10.12"
 }
 
-variable "CLIENT_VNET" {
+variable "TSOP_VNET" {
     default = "10.13"
 }
 
