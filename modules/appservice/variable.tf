@@ -1,20 +1,11 @@
-variable "TAGS_ENV" {
-    default = "Terraform Test"
-}
-
-# 실제 적용 시 skt-dev-kc-tsop-rg로 적용
 variable "RESOURCE_GROUP_NAME" {
-#    default = "skt-dev-kc-tsop-rg"
     default = "07531"
 }
 
-# 실제 적용 시 skt-dev-kc로 적용
-variable "NAME_PREFIX" {
-#    default = "skt-dev-kc"
+variable "PREFIX" {
     default = "07531"
 }
 
-# 사용 안하면 제거 예정
 variable "CLIENT_NAME" {
     default = "adt"
 }
