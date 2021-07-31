@@ -8,10 +8,12 @@ variable "RESOURCE_GROUP_NAME" {
     default = "07531"
 }
 
-# 실제 적용 시 skt-dev-kc로 적용
-variable "NAME_PREFIX" {
-#    default = "skt-dev-kc"
-    default = "07531"
+variable "TSOP_NAME_PREFIX" {
+    default = "skt-dev-kc"
+}
+
+variable "ONM_NAME_PREFIX" {
+    default = "adt-dev-kc"
 }
 
 variable "ONM_VNET" {
@@ -80,6 +82,12 @@ variable "TSOP_APPSERVICE" {
 #                "normal", "fast", "backend", "portal", "dashboard",
 #                "push", "batch", "downlink"]
     default = ["fm", "ev", "cctv"]
+}
+
+variable "ONM_APPSERVICE" {
+#    default = ["subhealth", "apihealth", "reshealth", "normal", "backend",
+#                "push", "onmui"]
+    default = ["subhealth", "apihealth", "reshealth"]
 }
 
 /*

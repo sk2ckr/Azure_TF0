@@ -1,6 +1,6 @@
 # Create virtual network
 resource "azurerm_virtual_network" "tsop_vnet" {
-    name                = "${var.NAME_PREFIX}-tsop-vnet"
+    name                = "${var.TSOP_NAME_PREFIX}-tsop-vnet"
     address_space       = ["${var.TSOP_VNET}.0.0/16"]
     location            = var.LOCATION
     resource_group_name = var.RESOURCE_GROUP_NAME
@@ -11,7 +11,7 @@ resource "azurerm_virtual_network" "tsop_vnet" {
 }
 
 resource "azurerm_virtual_network" "onm_vnet" {
-    name                = "${var.NAME_PREFIX}-onm-vnet"
+    name                = "${var.ONM_NAME_PREFIX}-onm-vnet"
     address_space       = ["${var.ONM_VNET}.0.0/16"]
     location            = var.LOCATION
     resource_group_name = var.RESOURCE_GROUP_NAME
