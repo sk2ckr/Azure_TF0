@@ -24,10 +24,11 @@ module "vnet" {
     
     TAGS_ENV                    = var.TAGS_ENV
     NAME_PREFIX                 = var.NAME_PREFIX
-    TSOP_VNET                   = var.TSOP_VNET
-    ONM_VNET                    = var.ONM_VNET
     LOCATION                    = var.LOCATION
     RESOURCE_GROUP_NAME         = var.RESOURCE_GROUP_NAME
+
+    TSOP_VNET                   = var.TSOP_VNET
+    ONM_VNET                    = var.ONM_VNET
 }
 
 module "appservice" {
@@ -38,4 +39,6 @@ module "appservice" {
     NAME_PREFIX                 = var.NAME_PREFIX
     LOCATION                    = var.LOCATION
     RESOURCE_GROUP_NAME         = var.RESOURCE_GROUP_NAME
+    
+    TSOP_APPSERVICE             = var.TSOP_APPSERVICE
 }

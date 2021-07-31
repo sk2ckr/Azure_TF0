@@ -9,3 +9,6 @@ variable "NAME_PREFIX" {
 
 variable "LOCATION" {
 }
+
+variable "TSOP_APPSERVICE" {
+}
